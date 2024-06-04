@@ -6,7 +6,7 @@ class GANetic(tensorflow.keras.losses.Loss):
     def __init__(
     	self, 
     	eps=1e-8,
-      reduction=None,
+        reduction=None,
     	name="ganetic_loss"):
         super().__init__(name=name)
         self.name = name
