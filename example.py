@@ -33,8 +33,8 @@ num_epochs = 200
 batch_size = 128
 EPSILON = 1e-8
 
-class NewLoss(tensorflow.keras.losses.Loss):
-    def __init__(self, name="new_loss"):
+class GANetic(tensorflow.keras.losses.Loss):
+    def __init__(self, name="ganetic_loss"):
         super().__init__(name=name)
     
     def call(self, y_true, y_pred):
@@ -94,7 +94,7 @@ def define_discriminator(loss_function, in_shape=(32,32,3)):
     model.add(Dense(1, activation='sigmoid'))
     opt = Adam(learning_rate=0.0002, beta_1=0.5)
     if loss_function == 1:
-        model.compile(loss=NewLoss(), optimizer=opt, metrics=['accuracy'])
+        model.compile(loss=GANetic(), optimizer=opt, metrics=['accuracy'])
     if loss_function == 2:
         model.compile(loss='binary_crossentropy', optimizer=opt, metrics=['accuracy'])
     if loss_function == 3:
@@ -143,7 +143,7 @@ def define_gan(g_model, d_model, loss_function):
     model.add(d_model)
     opt = Adam(learning_rate=0.0002, beta_1=0.5)
     if loss_function == 1:
-        model.compile(loss=NewLoss(), optimizer=opt)
+        model.compile(loss=GANetic(), optimizer=opt)
     if loss_function == 2:
         model.compile(loss='binary_crossentropy', optimizer=opt)
     if loss_function == 3:
