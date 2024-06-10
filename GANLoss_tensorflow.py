@@ -1,7 +1,5 @@
 import tensorflow
 
-EPSILON = 1e-8
-
 class GANetic(tensorflow.keras.losses.Loss):
     def __init__(
             	self, 
