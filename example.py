@@ -25,7 +25,6 @@ from tensorflow.keras.datasets import cifar10
 from tensorflow.keras.applications.inception_v3 import InceptionV3
 from tensorflow.keras.applications.inception_v3 import preprocess_input
 
----------------------------------------------------------------------------------------------------------------------------------
 
 directory = './'
 latent_dim = 100
