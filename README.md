@@ -1,7 +1,7 @@
 # GANetic-Loss
 This repository contains the code for the GANetic loss function found using the Genetic Programming (GP) approach. The loss function can be used to train GAN models.
 
-The full paper can be downloded [here]().
+The full paper can be downloded [here](https://arxiv.org/abs/2406.05023).
 
 <img src="https://github.com/ZKI-PH-ImageAnalysis/GANetic-Loss/assets/107623498/6e0a7299-b904-46be-9dae-a766e8f949ff" width="65%" height="65%">
 
